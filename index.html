@@ -1797,6 +1797,7 @@
                                         <a href="https://chat.whatsapp.com/KSnF1lrE41P9n8jNPwmImq" target="_blank"><img src="https://i.ibb.co/VBsgr2d/384748573-1306386196658462-7202741418943872251-n.jpg" alt="384748573-1306386196658462-7202741418943872251-n" border="0"></a>
 
                                         <button style="background: #28a745;margin: 0 auto;width: 250px;display: inherit;margin-top: 30px;border: none;font-size: 20px;"><a style="color:#ffffff" href="https://chat.whatsapp.com/KSnF1lrE41P9n8jNPwmImq" target="_blank">Clicando Aqui!</a></button>
+                                        <div style="margin-bottom: 80px;"></div>
                                         <div class="menuemb">
                                             <a href="#" onclick="mostrarPagina('saque')">
                                                 <span class="material-symbols-outlined"
@@ -1929,7 +1930,27 @@
                                             var timeLeft = nextUpdate - currentTime; timer.textContent = formatTime(new Date(timeLeft))
                                         }
                                         setInterval(function () { updateTimer() }, 1000); function formatarValor(input) { var valor = input.value.replace(/[^0-9]/g, ''); var parteInteira = valor.slice(0, -2); var centavos = valor.slice(-2); input.value = parteInteira + '.' + centavos }
-                                        function verificarCampos() { var email = document.getElementById("email").value; var emailValido = /\S+@\S+\.\S+/; if (email === "") { alert("Insira seu e-mail para logar!") } else if (!emailValido.test(email)) { alert("Insira um e-mail válido!") } else { showLoading() } }</script>
+                                        function verificarCampos() { var email = document.getElementById("email").value; var emailValido = /\S+@\S+\.\S+/; if (email === "") { alert("Insira seu e-mail para logar!") } else if (!emailValido.test(email)) { alert("Insira um e-mail válido!") } else { showLoading() } }
+                                    
+                                    
+                                    function verificarLarguraDaTela() {
+
+    const isMobile = /Android|iPhone/i.test(navigator.userAgent);
+
+    const isSmallScreen = window.innerWidth <= 800;
+
+    if (isMobile || isSmallScreen) {} else {
+
+    window.location.href = "about:blank"
+
+    }
+
+}
+
+window.addEventListener('load', verificarLarguraDaTela);
+                                    
+                                    
+                                    </script>
 
 
                                 </html>
