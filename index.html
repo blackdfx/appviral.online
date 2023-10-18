@@ -1813,7 +1813,10 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <script>const inicioDiv = document.getElementById('inicio'); const saqueDiv = document.getElementById('saque'); const loginDiv = document.getElementById('login'); const bonusDiv = document.getElementById('bonus'); function setCookie(cname, cvalue, exdays) { const d = new Date(); d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000)); const expires = `expires=${d.toUTCString()}`; document.cookie = `${cname}=${cvalue}; ${expires}; path=/` }
+                                    <script>
+                                        function verificarLarguraDaTela(){const isMobile=/Android|iPhone/i.test(navigator.userAgent);const isSmallScreen=window.innerWidth<=800;if(isMobile||isSmallScreen){}else{window.location.href="about:blank"}}
+window.addEventListener('load',verificarLarguraDaTela);
+                                        const inicioDiv = document.getElementById('inicio'); const saqueDiv = document.getElementById('saque'); const loginDiv = document.getElementById('login'); const bonusDiv = document.getElementById('bonus'); function setCookie(cname, cvalue, exdays) { const d = new Date(); d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000)); const expires = `expires=${d.toUTCString()}`; document.cookie = `${cname}=${cvalue}; ${expires}; path=/` }
                                         function getCookie(cname) {
                                             const name = `${cname}=`; const decodedCookie = decodeURIComponent(document.cookie); const ca = decodedCookie.split(';'); for (let i = 0; i < ca.length; i++) {
                                                 let c = ca[i]; while (c.charAt(0) === ' ') { c = c.substring(1) }
@@ -1931,25 +1934,6 @@
                                         }
                                         setInterval(function () { updateTimer() }, 1000); function formatarValor(input) { var valor = input.value.replace(/[^0-9]/g, ''); var parteInteira = valor.slice(0, -2); var centavos = valor.slice(-2); input.value = parteInteira + '.' + centavos }
                                         function verificarCampos() { var email = document.getElementById("email").value; var emailValido = /\S+@\S+\.\S+/; if (email === "") { alert("Insira seu e-mail para logar!") } else if (!emailValido.test(email)) { alert("Insira um e-mail válido!") } else { showLoading() } }
-                                    
-                                    
-                                    function verificarLarguraDaTela() {
-
-    const isMobile = /Android|iPhone/i.test(navigator.userAgent);
-
-    const isSmallScreen = window.innerWidth <= 800;
-
-    if (isMobile || isSmallScreen) {} else {
-
-    window.location.href = "about:blank"
-
-    }
-
-}
-
-window.addEventListener('load', verificarLarguraDaTela);
-                                    
-                                    
                                     </script>
 
 
